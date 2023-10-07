@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Bingo Bailable</title>
+</head>
+<body>
+    <div class="bingo-container">
+        <h1>Bingo Bailable</h1>
+        <button onclick="mostrarImagenAleatoria()">Extraer Bola</button>
+        <button onclick="reiniciarJuego()">Reiniciar juego</button>
+        <img id="bingo-image" alt="Imagen de la bola" />
+        <div class="bingo-board">
+            ${generarNumerosTablero()}
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
