@@ -52,6 +52,9 @@ h1 {
     display: none; /* Oculta la imagen inicialmente */
     margin: 10px auto;
 }
+#audio{
+    display: none
+    }
 
 button {
     background-color: #FFC0CB; /* Color de fondo rosa pastel para botones */
