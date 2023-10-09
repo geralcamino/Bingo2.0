@@ -4,7 +4,7 @@ const modulo = 32768;
 const multiplicador = 16645;
 const incremento = 1013904223;
 const bingoImages = [...Array(76).keys()].map(numero => `https://github.com/geralcamino/Bingo/raw/main/Img/${numero}.png`);
-const bingoAudios = [...Array(75).keys()].map(numero => `https://github.com/geralcamino/Bingo2.0/tree/6ef6542e966f3d12e145f9bb5a8b857fd55d5b30/audios/${numero}.mp3`);
+const bingoAudios = [...Array(75).keys()].map(numero => `https://github.com/geralcamino/Bingo2.0/raw/main/audios/${numero}.mp3`);
 const numerosEnTablero = [...Array(75).keys()].map(numero => numero + 1);
 
 
