@@ -4,7 +4,6 @@ const modulo = 32768;
 const multiplicador = 16645;
 const incremento = 1013904223;
 const bingoImages = [...Array(76).keys()].map(numero => `https://github.com/geralcamino/Bingo/raw/main/Img/${numero}.png`);
-const bingoAudios = [...Array(75).keys()].map(numero => `https://github.com/geralcamino/Bingo2.0/raw/main/audios/${numero}.mp3`);
 const numerosEnTablero = [...Array(75).keys()].map(numero => numero + 1);
 
 
@@ -13,7 +12,6 @@ function generarNumeroAleatorio()
     semilla = (multiplicador * semilla + incremento) % modulo;
     return semilla / modulo;
 }
-
 
 function mostrarImagenAleatoria() 
 {
@@ -62,7 +60,6 @@ function reproducirSonido(numero)
     audioElement.src = `https://github.com/geralcamino/Bingo2.0/raw/cambios_angie/audios/${numero}.mp3`;
     audioElement.play();
 }
-
 
 function generarNumerosTablero() {
     let numerosHTML = "";
