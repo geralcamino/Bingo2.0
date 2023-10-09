@@ -1,10 +1,12 @@
 // Congruencia lineal 
-let semilla = 12345; 
+let semilla = 56789; 
 const modulo = 32768;
 const multiplicador = 16645;
 const incremento = 1013904223;
 const bingoImages = [...Array(76).keys()].map(numero => `https://github.com/geralcamino/Bingo/raw/main/Img/${numero}.png`);
+const bingoAudios = [...Array(75).keys()].map(numero => `https://github.com/geralcamino/Bingo2.0/tree/6ef6542e966f3d12e145f9bb5a8b857fd55d5b30/audios/${numero}.mp3`);
 const numerosEnTablero = [...Array(75).keys()].map(numero => numero + 1);
+
 
 function generarNumeroAleatorio() 
 {
@@ -12,22 +14,28 @@ function generarNumeroAleatorio()
     return semilla / modulo;
 }
 
+function reproducir(){
+    const miAudio = document.getElementById("miAudio"); 
+    miAudio.play(); // Reproduce el sonido
+}
+
 function mostrarImagenAleatoria() 
 {
     if (bingoImages.length > 0) {
+        
         const randomNumberIndex = Math.floor(generarNumeroAleatorio() * bingoImages.length);
         const selectedImage = bingoImages[randomNumberIndex];
-
+       
 
         const bingoImageElement = document.getElementById("bingo-image");
         bingoImageElement.src = selectedImage;
         bingoImageElement.style.display = "block"; // Muestra la imagen
 
-        
         const numeroEnImagen = parseInt(selectedImage.match(/\d+/)[0]); // Extrae el número de la URL de la imagen
         colorearNumeroEnTablero(numeroEnImagen);
 
-        bingoImages.splice(randomNumberIndex, 1);
+        
+
     } else {
         alert("Todas las imágenes han sido mostradas.");
     }
@@ -41,6 +49,8 @@ function colorearNumeroEnTablero(numero) {
         numeroEnTablero.classList.add("coloreado");
     }
 }
+
+
 
 function generarNumerosTablero() {
     let numerosHTML = "";

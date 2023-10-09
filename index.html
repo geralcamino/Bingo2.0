@@ -11,6 +11,11 @@
         <h1>Bingo Bailable</h1>
         <button onclick="mostrarImagenAleatoria()">Extraer Bola</button>
         <button onclick="reiniciarJuego()">Reiniciar juego</button>
+        <button onclick="reproducir()">reproducir</button>
+        <audio id="miAudio" autoplay style="display: none">
+        <source type="audio/mp3" src="C:\Users\angie\Documents\GitHub\Bingo2.0\audios\1.mp3">
+        </audio>
+
         <img id="bingo-image" alt="Imagen de la bola" />
         <div class="bingo-board">
             ${generarNumerosTablero()}
