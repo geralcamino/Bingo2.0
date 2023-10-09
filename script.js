@@ -89,6 +89,9 @@ function reiniciarJuego() {
 
     bingoImages.length = 76;
 
+    const imagesContainer = document.getElementById("bingo-images-container");
+    imagesContainer.innerHTML = ""; // Elimina todas las imágenes del contenedorS
+
 
 }
 
