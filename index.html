@@ -13,20 +13,18 @@
         <button onclick="mostrarImagenAleatoria()">Extraer Bola</button>
         <button onclick="reiniciarJuego()">Reiniciar juego</button>
         <button onclick="reproducir()">reproducir</button>
-        <audio id="miAudio" autoplay style="display: none">
-        <source type="audio/mp3" src="/Bingo2.0/audios/4.mp3">  <!-- LA RUTA SE USA ASÍ -->
-        </audio>
 
+        
         <img id="bingo-image" alt="Imagen de la bola" />
         <div class="bingo-board">
             ${generarNumerosTablero()}
         </div>
         <div class="bottom-right-container">
-            <button onclick="reiniciarJuego()">Reiniciar juego</button>
             <div id="bingo-images-container" class="bingo-images-container responsive">
                 <!-- Aquí se mostrarán las imágenes generadas -->
             </div>
     </div>
+    <audio id="miAudio" preload="auto"></audio>
     <script src="script.js"></script>
 </body>
 </html>

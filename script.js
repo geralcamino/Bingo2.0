@@ -14,10 +14,6 @@ function generarNumeroAleatorio()
     return semilla / modulo;
 }
 
-function reproducir(){
-    const miAudio = document.getElementById("miAudio"); 
-    miAudio.play(); // Reproduce el sonido
-}
 
 function mostrarImagenAleatoria() 
 {
@@ -26,7 +22,6 @@ function mostrarImagenAleatoria()
         const randomNumberIndex = Math.floor(generarNumeroAleatorio() * bingoImages.length);
         const selectedImage = bingoImages[randomNumberIndex];
        
-
         const bingoImageElement = document.getElementById("bingo-image");
         bingoImageElement.src = selectedImage;
         bingoImageElement.style.display = "block"; // Muestra la imagen
@@ -34,7 +29,7 @@ function mostrarImagenAleatoria()
         const numeroEnImagen = parseInt(selectedImage.match(/\d+/)[0]); // Extrae el número de la URL de la imagen
         colorearNumeroEnTablero(numeroEnImagen);
 
-
+       
         // Crear un elemento de imagen para la imagen seleccionada
         const imageElement = document.createElement("img");
         imageElement.src = selectedImage;
@@ -42,6 +37,9 @@ function mostrarImagenAleatoria()
         // Agregar la imagen al contenedor de imágenes
         const imagesContainer = document.getElementById("bingo-images-container");
         imagesContainer.appendChild(imageElement);
+
+        reproducirSonido(numeroEnImagen);
+
         
     } else {
         alert("Todas las imágenes han sido mostradas.");
@@ -57,6 +55,13 @@ function colorearNumeroEnTablero(numero) {
     }
 }
 
+// Función para reproducir el sonido correspondiente al número
+function reproducirSonido(numero) 
+{
+    const audioElement = document.getElementById("miAudio");
+    audioElement.src = `https://github.com/geralcamino/Bingo2.0/raw/cambios_angie/audios/${numero}.mp3`;
+    audioElement.play();
+}
 
 
 function generarNumerosTablero() {
@@ -94,6 +99,9 @@ function reiniciarJuego() {
 
 
 }
+
+
+
 
 
 
