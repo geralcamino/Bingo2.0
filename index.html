@@ -7,6 +7,7 @@
     <title>Bingo Hermoso yop</title>
 </head>
 <body>
+    
     <div class="bingo-container">
         <h1>Bingo Bailable</h1>
         <button onclick="mostrarImagenAleatoria()">Extraer Bola</button>
@@ -15,6 +16,11 @@
         <div class="bingo-board">
             ${generarNumerosTablero()}
         </div>
+        <div class="bottom-right-container">
+            <button onclick="reiniciarJuego()">Reiniciar juego</button>
+            <div id="bingo-images-container" class="bingo-images-container responsive">
+                <!-- Aquí se mostrarán las imágenes generadas -->
+            </div>
     </div>
     <script src="script.js"></script>
 </body>

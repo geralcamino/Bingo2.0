@@ -28,6 +28,15 @@ function mostrarImagenAleatoria()
         colorearNumeroEnTablero(numeroEnImagen);
 
         bingoImages.splice(randomNumberIndex, 1);
+
+        // Crear un elemento de imagen para la imagen seleccionada
+        const imageElement = document.createElement("img");
+        imageElement.src = selectedImage;
+
+        // Agregar la imagen al contenedor de imágenes
+        const imagesContainer = document.getElementById("bingo-images-container");
+        imagesContainer.appendChild(imageElement);
+        
     } else {
         alert("Todas las imágenes han sido mostradas.");
     }
@@ -71,6 +80,9 @@ function reiniciarJuego() {
     });
 
     bingoImages.length = 76;
+
+    const imagesContainer = document.getElementById("bingo-images-container");
+    imagesContainer.innerHTML = ""; // Elimina todas las imágenes del contenedor
 
 
 }
