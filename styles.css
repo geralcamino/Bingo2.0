@@ -72,3 +72,26 @@ button:hover {
     color: black;
     background-color: #90EE90;
 }
+
+
+@media screen and (max-width: 768px) {
+    .title {
+        font-size: 24px;
+    }
+    p {
+        font-size: 18px;
+    }
+    bingo-board {
+        font-size: 14px;
+    }
+
+    bingo-number
+    {
+        font-size: 12px;
+    }
+
+    bingo-container
+    {
+        font-size: 12px;
+    }
+}
