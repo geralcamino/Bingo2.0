@@ -6,10 +6,18 @@ const incremento = 1013904223;
 const bingoImages = [...Array(76).keys()].map(numero => `https://github.com/geralcamino/Bingo/raw/main/Img/${numero}.png`);
 const numerosEnTablero = [...Array(75).keys()].map(numero => numero + 1);
 
+const bingoAudios = [...Array(76).keys()].map(numero => `C:/Users/asus/Documents/Bingo2.0/audios/audio${numero}.mp3`);
+
 function generarNumeroAleatorio() 
 {
     semilla = (multiplicador * semilla + incremento) % modulo;
     return semilla / modulo;
+}
+
+function reproducirAudio(numero) {
+    const audioElement = document.getElementById("bingo-audio");
+    audioElement.src = `audio${numero}.mp3`;
+    audioElement.play();
 }
 
 function mostrarImagenAleatoria() 
@@ -27,11 +35,14 @@ function mostrarImagenAleatoria()
         const numeroEnImagen = parseInt(selectedImage.match(/\d+/)[0]); // Extrae el número de la URL de la imagen
         colorearNumeroEnTablero(numeroEnImagen);
 
+        reproducirAudio(numeroEnImagen);
+
         bingoImages.splice(randomNumberIndex, 1);
     } else {
         alert("Todas las imágenes han sido mostradas.");
     }
 }
+
 
 function colorearNumeroEnTablero(numero) {
     const numeroEnTablero = document.querySelector(`.bingo-number[data-number="${numero}"]`);
