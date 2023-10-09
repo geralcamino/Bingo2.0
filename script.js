@@ -34,8 +34,15 @@ function mostrarImagenAleatoria()
         const numeroEnImagen = parseInt(selectedImage.match(/\d+/)[0]); // Extrae el número de la URL de la imagen
         colorearNumeroEnTablero(numeroEnImagen);
 
-        
 
+        // Crear un elemento de imagen para la imagen seleccionada
+        const imageElement = document.createElement("img");
+        imageElement.src = selectedImage;
+
+        // Agregar la imagen al contenedor de imágenes
+        const imagesContainer = document.getElementById("bingo-images-container");
+        imagesContainer.appendChild(imageElement);
+        
     } else {
         alert("Todas las imágenes han sido mostradas.");
     }
