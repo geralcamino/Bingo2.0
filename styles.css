@@ -18,30 +18,33 @@ h1 {
     font-size: 1.5rem;
 }
 
+
+
+/* Resto del estilo del tablero y números */
 .bingo-board {
-    max-width: 100%; 
+    max-width: 100%;
     display: grid;
-    grid-template-columns: repeat(15, 1fr); /* 15 columnas */
-    grid-gap: 5px; /* Espacio de 5px entre los números */
+    grid-template-columns: repeat(16, 1fr);
+    grid-gap: 5px;
     margin: 0 auto;
     padding: 10px;
-    background-color: #FFFAF0; 
+    background-color: #FFFAF0;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
 
 .bingo-number {
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    background-color: #FFC0CB; /* Color rosa pastel */
+    background-color: #FFC0CB;
     border-radius: 5px;
     height: 60px;
     width: 60px;
-    margin: 5px; 
+    margin: 5px;
 }
-
 .selected {
     background-color: #90EE90; /* Color verde pastel para números seleccionados */
 }
@@ -93,7 +96,7 @@ button:hover {
         height: 40px; 
         width: 40px; 
     }
-    
+
 }
 
 .bottom-right-container {
@@ -125,4 +128,10 @@ button:hover {
 .bingo-images-container img {
     max-width: 45%; /* Ancho máximo de cada imagen */
     margin: 5px;
+}
+
+/* Estilo para las letras B, I, N, G y O */
+.bingo-cell:first-child {
+    background-color: #FF69B4; /* Color diferente para la letra B */
+    color: white; /* Texto en blanco */
 }

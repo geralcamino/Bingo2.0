@@ -1,11 +1,13 @@
 // Congruencia lineal 
-let semilla = 56789; 
+let semilla = Date.now();
 const modulo = 32768;
 const multiplicador = 16645;
 const incremento = 1013904223;
 const bingoImages = [...Array(76).keys()].map(numero => `https://github.com/geralcamino/Bingo/raw/main/Img/${numero}.png`);
 const numerosEnTablero = [...Array(75).keys()].map(numero => numero + 1);
 
+// Array para llevar un registro de las balotas mostradas
+const balotasMostradas = [];
 
 function generarNumeroAleatorio() 
 {
@@ -16,29 +18,38 @@ function generarNumeroAleatorio()
 function mostrarImagenAleatoria() 
 {
     if (bingoImages.length > 0) {
-        
-        const randomNumberIndex = Math.floor(generarNumeroAleatorio() * bingoImages.length);
-        const selectedImage = bingoImages[randomNumberIndex];
-       
-        const bingoImageElement = document.getElementById("bingo-image");
-        bingoImageElement.src = selectedImage;
-        bingoImageElement.style.display = "block"; // Muestra la imagen
+        // Filtra las imágenes que aún no se han mostrado
+        const imagenesNoMostradas = bingoImages.filter((imagen, index) => !balotasMostradas.includes(index));
 
-        const numeroEnImagen = parseInt(selectedImage.match(/\d+/)[0]); // Extrae el número de la URL de la imagen
-        colorearNumeroEnTablero(numeroEnImagen);
+        if (imagenesNoMostradas.length > 0) {
+            const randomNumberIndex = Math.floor(generarNumeroAleatorio() * imagenesNoMostradas.length);
+            const selectedImage = imagenesNoMostradas[randomNumberIndex];
+            
+            // Agrega el índice de la imagen mostrada al registro
+            balotasMostradas.push(bingoImages.indexOf(selectedImage));
+            
+            // Restringe el número de balotas mostradas
+            if (balotasMostradas.length >= bingoImages.length) {
+                alert("Todas las imágenes han sido mostradas.");
+            }
 
-       
-        // Crear un elemento de imagen para la imagen seleccionada
-        const imageElement = document.createElement("img");
-        imageElement.src = selectedImage;
+            const bingoImageElement = document.getElementById("bingo-image");
+            bingoImageElement.src = selectedImage;
+            bingoImageElement.style.display = "block"; // Muestra la imagen
 
-        // Agregar la imagen al contenedor de imágenes
-        const imagesContainer = document.getElementById("bingo-images-container");
-        imagesContainer.appendChild(imageElement);
+            const numeroEnImagen = parseInt(selectedImage.match(/\d+/)[0]); // Extrae el número de la URL de la imagen
+            colorearNumeroEnTablero(numeroEnImagen);
 
-        reproducirSonido(numeroEnImagen);
+            // Crear un elemento de imagen para la imagen seleccionada
+            const imageElement = document.createElement("img");
+            imageElement.src = selectedImage;
 
-        
+            // Agregar la imagen al contenedor de imágenes
+            const imagesContainer = document.getElementById("bingo-images-container");
+            imagesContainer.appendChild(imageElement);
+
+            reproducirSonido(numeroEnImagen);
+        }
     } else {
         alert("Todas las imágenes han sido mostradas.");
     }
@@ -64,13 +75,18 @@ function reproducirSonido(numero)
 function generarNumerosTablero() {
     let numerosHTML = "";
 
-    for (let i = 0; i < numerosEnTablero.length; i++) {
-        numerosHTML += `<div class="bingo-number" data-number="${numerosEnTablero[i]}">${numerosEnTablero[i]}</div>`;
+    const letras = ["B", "I", "N", "G", "O"];
+
+    for (let i = 0; i < 5; i++) 
+    {
+        numerosHTML += `<div class="bingo-number bingo-letter">${letras[i]}</div>`;
+        for (let j = 1; j <= 15; j++) {
+            numerosHTML += `<div class="bingo-number" data-number="${i * 15 + j}">${i * 15 + j}</div>`;
+        }
     }
 
     return numerosHTML;
 }
-
 
 window.addEventListener("DOMContentLoaded", () => {
     const bingoBoard = document.querySelector(".bingo-board");
@@ -78,9 +94,7 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 // Metodo para reiniciar el juego si el jugador desea empezar desde cero. 
-
 function reiniciarJuego() {
-  
     const bingoImageElement = document.getElementById("bingo-image");
     bingoImageElement.style.display = "none";
 
@@ -89,20 +103,9 @@ function reiniciarJuego() {
         numero.classList.remove("coloreado");
     });
 
-    bingoImages.length = 76;
+    // Reiniciar el registro de balotas mostradas
+    balotasMostradas.length = 0;
 
     const imagesContainer = document.getElementById("bingo-images-container");
-    imagesContainer.innerHTML = ""; // Elimina todas las imágenes del contenedorS
-
-
+    imagesContainer.innerHTML = ""; // Elimina todas las imágenes del contenedor
 }
-
-
-
-
-
-
-
-
-
-
