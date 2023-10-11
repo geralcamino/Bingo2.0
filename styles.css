@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #8EEBF0ff;
+    background-image: url('img/Fondo.jpeg'); 
     margin: 0;
     padding: 0;
 }
@@ -11,7 +11,7 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    background-color: #8EEBF0ff;
+    background-image: url('img/Fondo.jpeg'); 
     border-radius: 10px;
 }
 
