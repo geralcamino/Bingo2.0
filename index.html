@@ -4,17 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.cdnfonts.com/css/arco" rel="stylesheet">
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/arco');
+        </style>
     <title>Bingo Hermoso yop</title>
 </head>
 <body>
     <div class="bingo-container">
-        <h1>Bingo Bailable</h1>
-        <button onclick="mostrarImagenAleatoria()">Extraer Bola</button>
-        <button onclick="reiniciarJuego()">Reiniciar juego</button>
-        <img id="bingo-image" alt="Imagen de la bola" />
-        <div class="bingo-board">
-            ${generarNumerosTablero()}
+        <div class="top-row">
+            <div class="container title-container">
+                <h1>Bingo Bailable</h1>
+            </div>
+            <div class="container button-container">
+                <button onclick="mostrarImagenAleatoria()">Extraer Bola</button>
+                <button onclick="reiniciarJuego()">Reiniciar juego</button>
+            </div>
+    
+                <div class="container bingo-image-container">
+                    <img id="bingo-image" alt="Imagen de la bola" />
+                </div>
         </div>
+        <div class="bottom-row">
+            <div class="container bingo-board-container">
+                <div class="bingo-board">
+                    ${generarNumerosTablero()}
+                </div>
+            </div>
+            <div class="container bingo-info-container">
+                <div class="historial-container">
+                    Historial de números
+                </div>
+                <div id="bingo-images-container" class="bingo-images-container responsive">
+                    <!-- Aquí se mostrarán las imágenes generadas -->
+                </div>
+            </div>
+        </div>
+        
+        
     </div>
     <script src="script.js"></script>
 </body>

@@ -1,7 +1,7 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #F0E5E6; /* Color de fondo rosa pastel */
+    background-color: #8EEBF0ff;
     margin: 0;
     padding: 0;
 }
@@ -11,23 +11,121 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 20px;
+    background-color: #8EEBF0ff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-h1 {
-    color: #FF69B4; /* Color rosa pastel para el encabezado */
-    font-size: 1.5rem;
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.bottom-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.container {
+    flex: 1;
+    margin: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.title-container {
+    background-color: #FEB7C9ff;
+    color: rgb(82, 34, 104);
+    font-family: 'ARCO', sans-serif;
+    max-width: 30%;
+    flex: 1;
+}
+
+.button-container {
+    text-align: center;
+    background-color: #FEB7C9ff;
+    display: flex;
+    justify-content: space-around;
+    max-width: 20%;
+    flex: 1;
+}
+
+.button-container button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin: 5px;
+    width: auto;
+    background-color: #FF90BAff;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.button-container button:hover {
+    background-color: #FEB7C9ff;
+    color: #FF90BAff;
+    cursor: pointer;
+}
+
+.bingo-image-container {
+    max-width: 100px;
+    width: 100%;
+    background-color: #FEB7C9ff;
+    height: 100px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.bingo-image-container img {
+    max-width: 100%;
 }
 
 .bingo-board {
-    max-width: 100%; /* Tablero ocupará el ancho completo del contenedor */
+    max-width: 100%;
     display: grid;
-    grid-template-columns: repeat(15, 1fr); /* 15 columnas */
-    grid-gap: 5px; /* Espacio de 5px entre los números */
+    grid-template-columns: repeat(16, 1fr);
+    grid-gap: 5px;
     margin: 0 auto;
-    padding: 10px;
-    background-color: #FFFAF0; /* Color de fondo marfil pastel */
+    padding: 5px;
+    background-color: #FEB7C9ff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.bottom-right-container {
+    width: 200px;
+    position: relative;
+    background-color: #FEB7C9ff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.bingo-images-container {
+    max-height: 300px;
+    overflow-y: auto;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.responsive {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.bingo-images-container img {
+    max-width: 45%;
+    margin: 5px;
 }
 
 .bingo-number {
@@ -35,40 +133,47 @@ h1 {
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    background-color: #FFC0CB; /* Color rosa pastel */
-    border-radius: 5px;
+    font-family: 'ARCO', sans-serif;
+    color: #502D75ff;
+    background-color: #FEE5A2ff;
+    border-radius: 10px;
     height: 60px;
     width: 60px;
-    margin: 5px; /* Margen de 5px alrededor de cada número */
+    margin: 5px;
 }
-
-.selected {
-    background-color: #90EE90; /* Color verde pastel para números seleccionados */
-}
-
-#bingo-image {
-    max-width: 100%;
-    height: auto;
-    display: none; /* Oculta la imagen inicialmente */
-    margin: 10px auto;
-}
-
-button {
-    background-color: #FFC0CB; /* Color de fondo rosa pastel para botones */
-    padding: 10px 20px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    margin: 10px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #FFA7B7; /* Color de fondo rosa pastel más claro al pasar el mouse */
-}
-
 
 .coloreado {
     color: black;
     background-color: #90EE90;
+}
+
+.bingo-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #FEB7C9ff;
+    width: 33%;
+    height: 380px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.bingo-images-container img {
+    max-width: 30px;
+    margin: 5px 0;
+    background-color: #FEB7C9ff;
+}
+
+.historial-container {
+    margin-bottom: 10px;
+}
+
+.bingo-images-container img {
+    max-width: 45%;
+    margin: 5px;
+}
+
+.bingo-cell:first-child {
+    background-color: #FEE5A2ff;
+    color: white;
 }
