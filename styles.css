@@ -18,8 +18,6 @@ h1 {
     font-size: 1.5rem;
 }
 
-
-
 /* Resto del estilo del tablero y números */
 .bingo-board {
     max-width: 100%;
@@ -52,7 +50,7 @@ h1 {
 #bingo-image {
     max-width: 100%;
     height: auto;
-    display: none; /* Oculta la imagen inicialmente */
+    display: none; 
     margin: 10px auto;
 }
 
@@ -88,7 +86,7 @@ button:hover {
     }
     
     .bingo-board {
-        grid-template-columns: repeat(5, 1fr); /* Cambia a 5 columnas en pantallas pequeñas */
+        grid-template-columns: repeat(5, 1fr); /* Cambia a 5 columnas  */
     }
 
     .bingo-number {
@@ -135,5 +133,3 @@ button:hover {
     background-color: #FF69B4; /* Color diferente para la letra B */
     color: white; /* Texto en blanco */
 }
-
-

@@ -5,4 +5,5 @@ window.addEventListener("DOMContentLoaded", () => {
     audio.src = "img/cancion.mp3";
     audio.play();
     document.body.appendChild(audio);
+    muted="muted"
 });
