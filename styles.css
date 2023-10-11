@@ -45,6 +45,13 @@ body {
     max-width: 30%;
     flex: 1;
 }
+.container-historial{
+    background-color: #FEB7C9ff;
+    color: rgb(156, 18, 71);
+    font-family: 'ARCO', sans-serif;
+    max-width: 30%;
+    flex: 1;
+}
 
 .button-container {
     text-align: center;
@@ -64,12 +71,15 @@ body {
     color: white;
     border: none;
     border-radius: 10px;
+    color: rgb(82, 34, 104);
+    font-family: 'ARCO', sans-serif;
 }
 
 .button-container button:hover {
     background-color: #FEB7C9ff;
     color: #FF90BAff;
     cursor: pointer;
+    
 }
 
 .bingo-image-container {
@@ -143,8 +153,8 @@ body {
 }
 
 .coloreado {
-    color: black;
-    background-color: #90EE90;
+    color: 502D75ff;
+    background-color: #f35295;
 }
 
 .bingo-info-container {
@@ -165,6 +175,9 @@ body {
 }
 
 .historial-container {
+    color: rgb(82, 34, 104);
+    font-family: 'ARCO', sans-serif;
+    font-size:medium;
     margin-bottom: 10px;
 }
 
