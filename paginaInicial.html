@@ -8,10 +8,15 @@
 </head>
 
 <body>
-
+    <audio id="miAudio" preload="auto">
+        <source src="img/cancion.mp3" type="audio/mpeg">
+    </audio>
    
     <h1><span>B</span><span>I</span><span>N</span><span>G</span><span>O</span><span> </span><span>G</span><span>O</span><span>!</span>
     <script src="script.js"></script>
+    <div class ="botonmusica">
+        <button id="my-button2" class="my-button2" onclick="reproducirAudio()">Música</button>
+    </div>
     <div class="contenedorbotones">
         <button class="my-button" onclick="location.href='index.html'">JUGAR</button>
         <button class="my-button" onclick="location.href='#popup1'">INSTRUCCIONES</button>
