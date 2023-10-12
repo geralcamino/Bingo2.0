@@ -1,18 +1,20 @@
 /* Estilo para el cuerpo de la página */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
     text-align: center;
     margin: 0;
     padding: 0;
+    background-image: url('img/fondo-blurred.png'); 
+    background-size: cover;
 }
 
 /* Estilo para el encabezado (h1) */
 h1 {
-    font-size: 2.5em;
+    font-size: 5em;
     color: #333;
     text-transform: uppercase;
     margin-top: 20px;
+    font-family: 'ARCO', sans-serif;
 }
 
 /* Estilo para las tarjetas de Bingo (enlaces) */
@@ -20,7 +22,8 @@ a {
     display: inline-block;
     text-decoration: none;
     color: #fff;
-    background-color: #0077b6;
+    background-color: #502D75;
+    font-family: 'ARCO', sans-serif;
     padding: 10px 20px;
     margin: 10px;
     border-radius: 5px;
@@ -29,12 +32,16 @@ a {
 }
 
 a:hover {
-    background-color: #00568d;
+    background-color: #82effd;
 }
 
 /* Estilo para el contenedor de cartones */
 .contenedor-cartones {
-    margin-top: 30px;
+    margin-top: 80px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 5px;
+    column-gap: 1px;
+    justify-items: center;
 }
-
-
