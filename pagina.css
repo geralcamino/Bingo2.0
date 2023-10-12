@@ -189,3 +189,29 @@ h1 span:nth-child(9){ animation-delay:.4s; }
     
   
   }
+
+  @media (max-width: 768px) {
+    body {
+        height: auto; /* Revertir la altura fija */
+    }
+
+    h1 {
+        font-size: 3em; /* Ajustar el tamaño de fuente para pantallas más pequeñas */
+    }
+
+    h1 span {
+        animation: none; /* Detener la animación de los span */
+    }
+
+    /* Ajustar estilos de los botones para pantallas más pequeñas */
+    .my-button {
+        font-size: large;
+    }
+
+    .contenedorbotones {
+        float: none;
+        margin-right: 0;
+        margin-top: 10%;
+        width: 100%; /* Ocupar todo el ancho disponible */
+    }
+}
