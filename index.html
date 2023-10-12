@@ -4,25 +4,49 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.cdnfonts.com/css/arco" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.0/dist/sweetalert2.min.css">
+
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/arco');
+        </style>
     <link rel="icon" href="img/IMG_6200.PNG">
     <title>Bingo Go</title>
 </head>
 <body>
     <div class="bingo-container">
-        <h1>Bingo Bailable</h1>
-        <button onclick="mostrarImagenAleatoria()">Extraer Bola</button>
-        <button onclick="reiniciarJuego()">Reiniciar juego</button>
+        <div class="top-row">
+            <div class="container title-container">
+                <h1>Bingo Go</h1>
+            </div>
+            <div class="container button-container">
+                <button onclick="mostrarImagenAleatoria()">Extraer Bola</button>
+                <button onclick="reiniciarJuego()">Reiniciar juego</button>
+            </div>
     
-        <img id="bingo-image" alt="Imagen de la bola" />
-        <div class="bingo-board">
-            ${generarTableroConLetras()}
+                <div class="container bingo-image-container">
+            
+        <img id="bingo-image" alt="" />
+                </div>
         </div>
-                
-        <div class="bottom-right-container">
-            <div id="bingo-images-container" class="bingo-images-container responsive">
-                <!-- Aquí se mostrarán las imágenes generadas -->
+        <div class="bottom-row">
+            <div class="container bingo-board-container">
+                <div class="bingo-board">
+                    ${generarTableroConLetras()}
+                </div>
+            </div>
+            <div class="container bingo-info-container">
+                <div class="historial-container">
+                    Historial de números
+                </div>
+                <div id="bingo-images-container" class="bingo-images-container responsive">
+                    <!-- Aquí se mostrarán las imágenes generadas -->
+                </div>
             </div>
         </div>
+                
+        
         <audio id="miAudio" preload="auto"></audio>
     </div>
     

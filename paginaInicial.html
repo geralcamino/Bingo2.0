@@ -1,0 +1,54 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pagina.css">
+    <script src="reproducir.js"></script>
+    <link rel="icon" href="img/IMG_6200.PNG">
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/arco');
+        </style>
+    <title>Bingo Go</title>
+</head>
+
+<body>
+    <audio id="miAudio" preload="auto">
+        <source src="img/cancion.mp3" type="audio/mpeg">
+    </audio>
+   
+    <h1><span>B</span><span>I</span><span>N</span><span>G</span><span>O</span><span> </span><span>G</span><span>O</span><span>!</span>
+    <script src="script.js"></script>
+    <div class ="botonmusica">
+        <button id="my-button2" class="my-button2" onclick="reproducirAudio()"><img src="img/bocina.jpeg" alt="" ></button>
+    </div>
+    <div class="contenedorbotones">
+        <button class="my-button" onclick="location.href='index.html'">JUGAR</button>
+        <button class="my-button" onclick="location.href='#popup1'">INSTRUCCIONES</button>
+        <button class="my-button" onclick="location.href='Tarjetas.html'">TARJETAS</button>
+    </div>
+    
+    
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+            <center><p style="color: #FF90BA">Instrucciones para jugar Bingo Go!</p></center>
+            <p>1. En la página principal encontrarás 3 botones los cuales son: jugar, instrucciones y tarjetas.</p>
+            <p>2. Como pudiste observar el botón instrucciones te trae a esta ventana donde están descritos los pasos a seguir.</p>
+            <p>3. El botón "jugar" te llevará al tablero del bingo, allí encontrarás 75 números.</p>
+            <p>4. En el tablero del bingo estará el botón "Extraer bola", con este traerás al azar los números definidos entre el (1-75) y el botón "Reiniciar juego" te limpiará todo el tablero. </p>
+            <p>5. Cada vez que extraigas una bola, el sistema la cantará y la marcará en el tablero. </p>
+            <p>6. Quien llene la tabla de bingo con los 24 números gana la partida. </p>
+            <p>7. En el botón "Tarjetas" encontrarás 32 cartones de bingo para jugar</p>
+
+        </div>
+  </div>
+        
+</div>
+
+
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,222 @@
+.body{
+  font-family: 'ARCO', sans-serif;
+}
+p {
+    text-align: center;
+    font-family: Tahoma, Arial, sans-serif;
+    color: black;
+    font-size: medium;
+    text-align: justify;
+  }
+  
+  .box {
+    width: 40%;
+    margin: 0 auto;
+    background: rgba(255,255,255,0.2);
+    padding: 35px;
+    border: 2px solid #fff;
+    border-radius: 20px/50px;
+    background-clip: padding-box;
+    text-align: center;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    margin: 100px auto;
+    padding: 40px;
+    height: 50%;
+    background: #fff;
+    border-radius: 5px;
+    width: 50%;
+    position: relative;
+    transition: all 2s ease-in-out;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+  }
+  .popup .close {
+    position: absolute;
+    top: 2px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+  }
+  .popup .close:hover {
+    color: #06D85F;
+  }
+  .popup .content {
+    max-height: 100%;
+    overflow: auto;
+    
+  }
+  
+  @media screen and (max-width: 700px){
+    .box{
+      width: 70%;
+    }
+    .popup{
+      width: 70%;
+    }
+  }
+
+@import url(https://fonts.googleapis.com/css?family=Signika:700,300,600);
+
+.my-button { font-size: calc(1em + 1vw) }
+
+body { height: 30%; 
+background-image: url('img/Fondo.jpeg'); 
+          background-size: cover; 
+          background-repeat: no-repeat; 
+          background-attachment: fixed;
+          background-position: center;  }
+          
+body { justify-content: center; align-items: center; margin:20px 0; text-align:center; overflow:hidden; }
+
+h1 {
+ font-size:5em;
+ font-family: 'ARCO', sans-serif;
+ user-select:none;
+
+}
+
+h1 span { display:inline-block; animation:float .2s ease-in-out infinite; margin-top: 50px; }
+ @keyframes float {
+  0%,100%{ transform:none; }
+  33%{ transform:translateY(-1px) rotate(-2deg); }
+  66%{ transform:translateY(1px) rotate(2deg); }
+}
+body:hover span { animation:bounce .6s; }
+@keyframes bounce {
+  0%,100%{ transform:translate(0); }
+  25%{ transform:rotateX(20deg) translateY(2px) rotate(-3deg); }
+  50%{ transform:translateY(-20px) rotate(3deg) scale(1.1);  }
+}
+
+@media (max-width:700px) and (min-width:500px) {
+    .contenedorbotones{
+       font-size: 12px;
+    }
+}
+
+span:nth-child(4n) { color:#502D75; text-shadow:1px 1px black, 2px 2px}
+span:nth-child(4n-1) { color:#FEE5A2; text-shadow:1px 1px black, 2px 2px}
+span:nth-child(4n-2) { color:#8EEBF0; text-shadow:1px 1px black, 2px 2px}
+span:nth-child(4n-3) { color:#FF90BA;  text-shadow:1px 1px black, 2px 2px}
+
+h1 span:nth-child(2){ animation-delay:.05s; }
+h1 span:nth-child(3){ animation-delay:.1s; }
+h1 span:nth-child(4){ animation-delay:.15s; }
+h1 span:nth-child(5){ animation-delay:.2s; }
+h1 span:nth-child(6){ animation-delay:.25s; }
+h1 span:nth-child(7){ animation-delay:.3s; }
+h1 span:nth-child(8){ animation-delay:.35s; }
+h1 span:nth-child(9){ animation-delay:.4s; }
+
+.my-button {
+    padding: 10px 20px;
+    background-color: #502D75;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: x-large;
+    font-family: 'ARCO', sans-serif;
+    display: block;
+    margin: 15px;
+     
+  }
+  .my-button:hover {
+    background-color: #FF90BA;
+  }
+  .my-button:active {
+    background-color: #FF90BA;
+  }
+
+  .my-button2 {
+    padding: auto auto;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: x-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: block;
+    margin: 5px;
+     
+  }
+
+  .my-button2 img {
+    border-radius: 30%; /* Esto agrega un radio del 50% para hacer que la imagen sea circular */
+    width: 60px;
+    height: 60px;
+}
+
+
+  .contenedorbotones {
+    float: right;
+    margin-top: 17%;
+    display: flex; /* Crea un contenedor flexible para los botones */
+    flex-direction: column; /* Los botones se apilan verticalmente */
+    width: 25%
+    
+  }
+
+  .botonmusica {
+    float: right;
+    margin-right: 5%;
+    margin-top: 2%;
+    display: flex; /* Crea un contenedor flexible para los botones */
+    flex-direction: column; /* Los botones se apilan verticalmente */
+    width: 12%
+    
+  
+  }
+
+  @media (max-width: 768px) {
+    body {
+        height: auto; /* Revertir la altura fija */
+    }
+
+    h1 {
+        font-size: 3em; /* Ajustar el tamaño de fuente para pantallas más pequeñas */
+    }
+
+    h1 span {
+        animation: none; /* Detener la animación de los span */
+    }
+
+    /* Ajustar estilos de los botones para pantallas más pequeñas */
+    .my-button {
+        font-size: large;
+    }
+
+    .contenedorbotones {
+        float: none;
+        margin-right: 0;
+        margin-top: 10%;
+        width: 100%; /* Ocupar todo el ancho disponible */
+    }
+}
