@@ -45,7 +45,7 @@ a:hover {
     justify-items: center;
 }
 
-.button {
+.rotate-button {
     padding: 10px 10px; /* Ajusta el relleno según tus necesidades */
     text-align: center; /* Centra el texto e icono horizontalmente */
     background-color: #FEB7C9ff;
