@@ -45,6 +45,26 @@ a:hover {
     justify-items: center;
 }
 
+.button {
+    padding: 10px 10px; /* Ajusta el relleno según tus necesidades */
+    text-align: center; /* Centra el texto e icono horizontalmente */
+    background-color: #FEB7C9ff;
+    border-radius: 20px;
+    border: 2px solid #FEB7C9ff ;
+    float: left;
+    margin-left: 20px;
+  }
+  
+.button img {
+    border-radius: 40px;
+    background-color: #FEB7C9ff;
+    margin-right: 5px;
+    width: 40px;
+    height: 40px;
+    
+      /* Ajusta el margen derecho para separar el icono del texto */
+  }
+
 /* Añade reglas de estilo específicas para dispositivos más grandes */
 @media (min-width: 768px) {
     /* Estilo para el contenedor de cartones en dispositivos medianos y grandes */

@@ -1,3 +1,27 @@
+.bingo-board .container {
+    width: calc(33.33% - 10px); /* Ajusta el ancho según tus necesidades */
+    margin: 5px; /* Espacio entre los elementos */
+    text-align: center; /* Alinea el contenido en el centro */
+    background-color: #f0f0f0; /* Color de fondo opcional */
+    border: 1px solid #999; /* Borde opcional */
+  }
+  
+  /* Estilos para pantallas más pequeñas (menos de 600px) */
+  @media (max-width: 600px) {
+    .bingo-board {
+      width: calc(50% - 10px); /* Ajusta el ancho para dos columnas */
+    }
+  }
+  
+  /* Estilos para pantallas aún más pequeñas (menos de 400px) */
+  @media (max-width: 400px) {
+    .bingo-board {
+      width: calc(100% - 10px); /* Un solo elemento por fila */
+    }
+  }
+  
+
+
 body {
     font-family: Arial, sans-serif;
     text-align: center;
@@ -128,11 +152,6 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.responsive {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
 
 .bingo-images-container img {
     max-width: 45%;
@@ -194,26 +213,6 @@ body {
 }
 
 
-@media screen and (max-width: 768px) {
-    .title {
-        font-size: 24px;
-    }
-    .p {
-        font-size: 18px;
-    }
-    
-    .bingo-board {
-        grid-template-columns: repeat(5, 1fr); /* Cambia a 5 columnas  */
-    }
-
-    .bingo-number {
-        font-size: 1rem; 
-        height: 40px; 
-        width: 40px; 
-    }
-
-}
-
 .bottom-right-container {
     position: fixed;
     bottom: 0;
@@ -234,11 +233,6 @@ body {
     padding: 5px;
 }
 
-.responsive {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
 
 .bingo-images-container img {
     max-width: 80px;
