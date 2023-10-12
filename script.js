@@ -3,7 +3,7 @@ let semilla = Date.now();
 const modulo = 32768;
 const multiplicador = 16645;
 const incremento = 1013904223;
-const bingoImages = [...Array(76).keys()].map(numero => `https://github.com/geralcamino/Bingo/raw/main/Img/${numero}.png`);
+const bingoImages = [...Array(76).keys()].map(numero => `https://github.com/geralcamino/Bingo2.0/raw/main/balotas/${numero}.png`);
 const numerosEnTablero = [...Array(75).keys()].map(numero => numero + 1);
 
 // Array para llevar un registro de las balotas mostradas
