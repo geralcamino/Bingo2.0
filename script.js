@@ -3,7 +3,7 @@ let semilla = Date.now();
 const modulo = 32768;
 const multiplicador = 16645;
 const incremento = 1013904223;
-const bingoImages = [...Array(76).keys()].map(numero => `https://github.com/geralcamino/Bingo/raw/main/Img/${numero}.png`);
+const bingoImages = [...Array(75).keys()].map(numero => `https://github.com/geralcamino/Bingo/raw/main/Img/${numero +1}.png`);
 const numerosEnTablero = [...Array(75).keys()].map(numero => numero + 1);
 
 
@@ -32,7 +32,20 @@ function mostrarImagenAleatoria()
             
             // Restringe el número de balotas mostradas
             if (balotasMostradas.length >= bingoImages.length) {
-                alert("Todas las imágenes han sido mostradas.");
+                Swal.fire
+             ({
+            icon: 'info',
+            title: 'Fin del juego',
+            text: 'Gracias por participar',
+            iconColor:'#FF69B4',  
+            confirmButtonText: 'Ver juego',
+            customClass: 
+            {
+            popup: 'my-custom-modal-class', 
+            title: 'my-custom-title-class', 
+            content: 'my-custom-content-class',     
+             },
+             });
             }
 
             const bingoImageElement = document.getElementById("bingo-image");
@@ -112,13 +125,11 @@ function reiniciarJuego() {
         showCancelButton: true,
         confirmButtonText: 'Sí, reiniciar',
         cancelButtonText: 'Cancelar',
-        
-        customClass: {
+        customClass: 
+        {
             popup: 'my-custom-modal-class', 
             title: 'my-custom-title-class', 
-            content: 'my-custom-content-class', 
-            
-            
+            content: 'my-custom-content-class',     
         },
        
     }).then((result) => {

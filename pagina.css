@@ -156,7 +156,7 @@ h1 span:nth-child(9){ animation-delay:.4s; }
 
   .my-button2 {
     padding: auto auto;
-    background-color: #502D75;
+    background-color: transparent;
     color: white;
     border: none;
     border-radius: 7px;
@@ -167,12 +167,13 @@ h1 span:nth-child(9){ animation-delay:.4s; }
     margin: 5px;
      
   }
-  .my-button2:hover {
-    background-color: #FF90BA;
-  }
-  .my-button2:active {
-    background-color: #FF90BA;
-  }
+
+  .my-button2 img {
+    border-radius: 30%; /* Esto agrega un radio del 50% para hacer que la imagen sea circular */
+    width: 60px;
+    height: 60px;
+}
+
 
   .contenedorbotones {
     float: right;

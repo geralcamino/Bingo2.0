@@ -180,6 +180,7 @@ body {
     font-family: 'ARCO', sans-serif;
     font-size:medium;
     margin-bottom: 10px;
+    margin-top: 5px;
 }
 
 .bingo-images-container img {
@@ -252,8 +253,6 @@ body {
 
 
 
-
-
 .my-custom-title-class 
 {
     font-family: 'ARCO', sans-serif; 
@@ -264,6 +263,8 @@ body {
 {
     
     font-family: 'ARCO', sans-serif;   
+    
 }
+
 
 

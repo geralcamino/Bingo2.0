@@ -13,7 +13,7 @@ h1 {
     font-size: 5em;
     color: #333;
     text-transform: uppercase;
-    margin-top: 20px;
+    margin: 20px 0;
     font-family: 'ARCO', sans-serif;
 }
 
@@ -37,11 +37,18 @@ a:hover {
 
 /* Estilo para el contenedor de cartones */
 .contenedor-cartones {
-    margin-top: 80px;
+    margin-top: 60px;
     display: grid;
     grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(4, auto);
+    grid-template-rows: repeat(4, 1fr); /* Cambio a 1fr para mantener 4 filas */
     gap: 5px;
-    column-gap: 1px;
     justify-items: center;
+}
+
+/* Añade reglas de estilo específicas para dispositivos más grandes */
+@media (min-width: 768px) {
+    /* Estilo para el contenedor de cartones en dispositivos medianos y grandes */
+    .contenedor-cartones {
+        grid-template-columns: repeat(8, 1fr); /* Mantiene 8 columnas en dispositivos medianos y grandes */
+    }
 }
