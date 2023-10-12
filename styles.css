@@ -85,7 +85,7 @@ body {
 .bingo-image-container {
     max-width: 100px;
     width: 100%;
-    background-color: #FEB7C9ff;
+    background-color: rgb(240, 205, 214);
     height: 100px;
     overflow: hidden;
     display: flex;
