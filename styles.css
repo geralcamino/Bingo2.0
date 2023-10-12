@@ -96,7 +96,7 @@ body {
 }
 
 .bingo-image-container img {
-    max-width: 100%;
+    max-width: 80%;
 }
 
 /* Resto del estilo del tablero y números */
@@ -183,7 +183,7 @@ body {
 }
 
 .bingo-images-container img {
-    max-width: 45%;
+    max-width: 85%;
     margin: 5px;
 }
 
@@ -227,7 +227,7 @@ body {
 }
 
 .bingo-images-container {
-    max-height: 200px; /* Altura máxima del contenedor */
+    max-height: 320px; /* Altura máxima del contenedor */
     overflow-y: auto; /* Habilita el desplazamiento vertical */
     border: 1px solid #ccc; /* Borde opcional */
     padding: 5px;
@@ -240,8 +240,8 @@ body {
 }
 
 .bingo-images-container img {
-    max-width: 45%; /* Ancho máximo de cada imagen */
-    margin: 5px;
+    max-width: 80px;
+    margin: 1px;
 }
 
 /* Estilo para las letras B, I, N, G y O */
@@ -249,3 +249,21 @@ body {
     background-color: #FF69B4; /* Color diferente para la letra B */
     color: white; /* Texto en blanco */
 }
+
+
+
+
+
+.my-custom-title-class 
+{
+    font-family: 'ARCO', sans-serif; 
+}
+
+
+.my-custom-content-class 
+{
+    
+    font-family: 'ARCO', sans-serif;   
+}
+
+

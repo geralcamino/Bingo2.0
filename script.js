@@ -6,6 +6,7 @@ const incremento = 1013904223;
 const bingoImages = [...Array(76).keys()].map(numero => `https://github.com/geralcamino/Bingo/raw/main/Img/${numero}.png`);
 const numerosEnTablero = [...Array(75).keys()].map(numero => numero + 1);
 
+
 // Array para llevar un registro de las balotas mostradas
 const balotasMostradas = [];
 
@@ -17,7 +18,8 @@ function generarNumeroAleatorio()
 
 function mostrarImagenAleatoria() 
 {
-    if (bingoImages.length > 0) {
+    if (bingoImages.length > 0) 
+    {
         // Filtra las imágenes que aún no se han mostrado
         const imagenesNoMostradas = bingoImages.filter((imagen, index) => !balotasMostradas.includes(index));
 
@@ -50,8 +52,15 @@ function mostrarImagenAleatoria()
 
             reproducirSonido(numeroEnImagen);
         }
-    } else {
-        alert("Todas las imágenes han sido mostradas.");
+    } 
+    else 
+    {
+        Swal.fire
+        ({
+            icon: 'info',
+            title: 'Fin del juego',
+            text: 'Gracias por participar'
+        });
     }
 }
 
@@ -95,6 +104,32 @@ window.addEventListener("DOMContentLoaded", () => {
 
 // Metodo para reiniciar el juego si el jugador desea empezar desde cero. 
 function reiniciarJuego() {
+    Swal.fire({
+        title: '¿Seguro deseas reiniciar el juego?',
+        text: 'Todos los progresos se perderán',
+        icon: 'warning',
+        iconColor:'#FF69B4',
+        showCancelButton: true,
+        confirmButtonText: 'Sí, reiniciar',
+        cancelButtonText: 'Cancelar',
+        
+        customClass: {
+            popup: 'my-custom-modal-class', 
+            title: 'my-custom-title-class', 
+            content: 'my-custom-content-class', 
+            
+            
+        },
+       
+    }).then((result) => {
+        if (result.isConfirmed) {
+            reiniciarJuegoConfirmado();
+        }
+    });
+}
+
+function reiniciarJuegoConfirmado() {
+    // Coloca aquí el código para reiniciar el juego
     const bingoImageElement = document.getElementById("bingo-image");
     bingoImageElement.style.display = "none";
 
@@ -109,3 +144,4 @@ function reiniciarJuego() {
     const imagesContainer = document.getElementById("bingo-images-container");
     imagesContainer.innerHTML = ""; // Elimina todas las imágenes del contenedor
 }
+
