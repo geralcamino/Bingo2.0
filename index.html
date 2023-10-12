@@ -1,55 +1,54 @@
-<!DOCTYPE html>
-<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.cdnfonts.com/css/arco" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.0/dist/sweetalert2.min.css">
-
+    <link rel="stylesheet" href="pagina.css">
+    <script src="reproducir.js"></script>
+    <link rel="icon" href="img/IMG_6200.PNG">
     <style>
         @import url('https://fonts.cdnfonts.com/css/arco');
         </style>
-    <link rel="icon" href="img/IMG_6200.PNG">
     <title>Bingo Go</title>
 </head>
+
 <body>
-    <div class="bingo-container">
-        <div class="top-row">
-            <div class="container title-container">
-                <h1>Bingo Go</h1>
-            </div>
-            <div class="container button-container">
-                <button onclick="mostrarImagenAleatoria()">Extraer Bola</button>
-                <button onclick="reiniciarJuego()">Reiniciar juego</button>
-            </div>
-    
-                <div class="container bingo-image-container">
-            
-        <img id="bingo-image" alt="" />
-                </div>
-        </div>
-        <div class="bottom-row">
-            <div class="container bingo-board-container">
-                <div class="bingo-board">
-                    ${generarTableroConLetras()}
-                </div>
-            </div>
-            <div class="container bingo-info-container">
-                <div class="historial-container">
-                    Historial de números
-                </div>
-                <div id="bingo-images-container" class="bingo-images-container responsive">
-                    <!-- Aquí se mostrarán las imágenes generadas -->
-                </div>
-            </div>
-        </div>
-                
-        
-        <audio id="miAudio" preload="auto"></audio>
+    <audio id="miAudio" preload="auto">
+        <source src="img/cancion.mp3" type="audio/mpeg">
+    </audio>
+   
+    <h1><span>B</span><span>I</span><span>N</span><span>G</span><span>O</span><span> </span><span>G</span><span>O</span><span>!</span>
+    <script src="script.js"></script>
+    <div class ="botonmusica">
+        <button id="my-button2" class="my-button2" onclick="reproducirAudio()"><img src="img/bocina.jpeg" alt="" ></button>
+    </div>
+    <div class="contenedorbotones">
+        <button class="my-button" onclick="location.href='index.html'">JUGAR</button>
+        <button class="my-button" onclick="location.href='#popup1'">INSTRUCCIONES</button>
+        <button class="my-button" onclick="location.href='Tarjetas.html'">TARJETAS</button>
     </div>
     
-    <script src="script.js"></script>
+    
+<div id="popup1" class="overlay">
+	<div class="popup">
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+            <center><p style="color: #FF90BA">Instrucciones para jugar Bingo Go!</p></center>
+            <p>1. En la página principal encontrarás 3 botones los cuales son: jugar, instrucciones y tarjetas.</p>
+            <p>2. Como pudiste observar el botón instrucciones te trae a esta ventana donde están descritos los pasos a seguir.</p>
+            <p>3. El botón "jugar" te llevará al tablero del bingo, allí encontrarás 75 números.</p>
+            <p>4. En el tablero del bingo estará el botón "Extraer bola", con este traerás al azar los números definidos entre el (1-75) y el botón "Reiniciar juego" te limpiará todo el tablero. </p>
+            <p>5. Cada vez que extraigas una bola, el sistema la cantará y la marcará en el tablero. </p>
+            <p>6. Quien llene la tabla de bingo con los 24 números gana la partida. </p>
+            <p>7. En el botón "Tarjetas" encontrarás 32 cartones de bingo para jugar</p>
+
+        </div>
+  </div>
+        
+</div>
+
+
+
 </body>
+
+
+
 </html>
