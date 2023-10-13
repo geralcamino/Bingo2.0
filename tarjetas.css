@@ -4,8 +4,9 @@ body {
     text-align: center;
     margin: 0;
     padding: 0;
-    background-image: url('img/fondo-blurred.png'); 
+    background-image: url('img/fondo-blurred.png');
     background-size: cover;
+    overflow-y: auto; /* Allow vertical scrollbar when content overflows */
 }
 
 /* Estilo para el encabezado (h1) */
@@ -39,31 +40,35 @@ a:hover {
 .contenedor-cartones {
     margin-top: 60px;
     display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(4, 1fr); /* Cambio a 1fr para mantener 4 filas */
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Adjusted grid columns */
     gap: 5px;
     justify-items: center;
+    padding: 10px; /* Added padding for better spacing */
+}
+.rotate-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
 }
 
-.rotate-button {
-    padding: 10px 10px; /* Ajusta el relleno según tus necesidades */
-    text-align: center; /* Centra el texto e icono horizontalmente */
+.rotate-button img {
+    width: 60px; /* Adjust the width according to your image */
+    height: 60px; /* Adjust the height according to your image */
+}
+
+.button-atras {
+    position: absolute;
+    max-width: auto;
+    top: 20px; /* Adjust the top position as needed */
+    left: 20px; /* Adjust the left position as needed */
     background-color: #FEB7C9ff;
-    border-radius: 20px;
-    border: 2px solid #FEB7C9ff ;
-    float: left;
-    margin-left: 20px;
-  }
-  
-.button img {
-    border-radius: 40px;
-    background-color: #FEB7C9ff;
-    margin-right: 5px;
-    width: 40px;
-    height: 40px;
-    
-      /* Ajusta el margen derecho para separar el icono del texto */
-  }
+    font-family: 'ARCO', sans-serif;
+    padding: 2px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
 
 /* Añade reglas de estilo específicas para dispositivos más grandes */
 @media (min-width: 768px) {
@@ -71,4 +76,11 @@ a:hover {
     .contenedor-cartones {
         grid-template-columns: repeat(8, 1fr); /* Mantiene 8 columnas en dispositivos medianos y grandes */
     }
+}
+
+.container {
+    flex: 1;
+    margin: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }

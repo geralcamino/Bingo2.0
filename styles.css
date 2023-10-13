@@ -42,8 +42,15 @@ body {
     background-color: #FEB7C9ff;
     color: rgb(82, 34, 104);
     font-family: 'ARCO', sans-serif;
-    max-width: 30%;
+    max-width: 25%;
     flex: 1;
+}
+.title-container img {
+    float: left;
+    margin-top: 4px;
+    margin-left: 15px;
+    width: 70px; /* Adjust the width according to your image */
+    height: 70px; /* Adjust the height according to your image */
 }
 .container-historial{
     background-color: #FEB7C9ff;
@@ -278,16 +285,18 @@ body {
 }
 
 .rotate-button img {
-    width: 24px; /* Adjust the width according to your image */
-    height: 24px; /* Adjust the height according to your image */
+    width: 55px; /* Adjust the width according to your image */
+    height: 55px; /* Adjust the height according to your image */
 }
 
 .button-atras{
     background-color: #FEB7C9ff;
+    justify-content: center;
     color: rgb(82, 34, 104);
     font-family: 'ARCO', sans-serif;
-    max-width: 35px;
-    max-height: 50px;
+    max-width: 50px;
+    max-height: 70px;
+    padding-right: 20px;
     flex: 1;
     
 }
