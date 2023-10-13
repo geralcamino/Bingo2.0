@@ -326,3 +326,16 @@ body {
     
 }
 
+.my-footer 
+{
+    background-color: transparent;
+    text-align: center;
+    padding: 2px;
+    font-family: 'ARCO', sans-serif;
+    color: #502D75ff;
+    
+}
+
+
+
+
