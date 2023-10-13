@@ -191,8 +191,7 @@ h1 span:nth-child(9){ animation-delay:.4s; }
     display: flex; /* Crea un contenedor flexible para los botones */
     flex-direction: column; /* Los botones se apilan verticalmente */
     width: 12%
-    
-  
+     
   }
 
   @media (max-width: 768px) {
@@ -211,6 +210,13 @@ h1 span:nth-child(9){ animation-delay:.4s; }
     /* Ajustar estilos de los botones para pantallas más pequeñas */
     .my-button {
         font-size: large;
+    }
+
+    .my-button2 img
+    {
+        border-radius: 30%; 
+        width: 10vw; 
+        height: 10vw; 
     }
 
     .contenedorbotones {
