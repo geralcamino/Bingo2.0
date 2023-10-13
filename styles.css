@@ -12,11 +12,11 @@ body {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    
     border-radius: 10px;
 }
 
-.top-row {
+.top-row 
+{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,14 +31,16 @@ body {
     width: 100%;
 }
 
-.container {
+.container 
+{
     flex: 1;
     margin: 5px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.title-container {
+.title-container 
+{
     background-color: #FEB7C9ff;
     color: rgb(82, 34, 104);
     font-family: 'ARCO', sans-serif;
@@ -49,8 +51,8 @@ body {
     float: left;
     margin-top: 4px;
     margin-left: 15px;
-    width: 70px; /* Adjust the width according to your image */
-    height: 70px; /* Adjust the height according to your image */
+    width: 70px; 
+    height: 70px; 
 }
 .container-historial{
     background-color: #FEB7C9ff;
@@ -62,15 +64,27 @@ body {
 
 .button-container {
     text-align: center;
-    background-color: #FEB7C9ff;
-    display: flex;
-    justify-content: space-around;
-    max-width: 300px;
-    flex: 1;
+    background-color: transparent;
+    max-width: 50%;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    align-items: center; 
+    padding: 10px; 
+    
 }
 
-.button-container button {
-    padding: 10px 20px;
+@media (max-width: 768px) 
+{
+    .button-container {
+        padding: 1px; /* Reduce el espacio en resoluciones más pequeñas */
+        flex-wrap: wrap; 
+    }
+
+}
+
+.button-container button 
+{
+    padding: 10px 10px;
     font-size: 1rem;
     margin: 5px;
     width: auto;
@@ -101,6 +115,11 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
+@media screen and (max-width: 768px) {
+    
+}
+
 
 .bingo-image-container img {
     background-color: #FEB7C9ff;
@@ -285,8 +304,8 @@ body {
 }
 
 .rotate-button img {
-    width: 55px; /* Adjust the width according to your image */
-    height: 55px; /* Adjust the height according to your image */
+    width: 55px; 
+    height: 55px; 
 }
 
 .button-atras{
