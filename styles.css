@@ -70,6 +70,7 @@ body {
     justify-content: center; 
     align-items: center; 
     padding: 10px; 
+    box-shadow: none;
     
 }
 
@@ -94,6 +95,11 @@ body {
     border-radius: 10px;
     color: rgb(82, 34, 104);
     font-family: 'ARCO', sans-serif;
+    flex: 1;
+    margin: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
 }
 
 .button-container button:hover {
