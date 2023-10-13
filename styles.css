@@ -66,12 +66,12 @@ body {
     text-align: center;
     background-color: transparent;
     max-width: 50%;
-    flex-wrap: wrap; 
-    justify-content: center; 
-    align-items: center; 
-    padding: 10px; 
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
     box-shadow: none;
-    
+    display: flex; /* Ensure the buttons are displayed in a row */
 }
 
 @media (max-width: 768px) 
@@ -83,8 +83,7 @@ body {
 
 }
 
-.button-container button 
-{
+.button-container button {
     padding: 10px 10px;
     font-size: 1rem;
     margin: 5px;
@@ -99,7 +98,6 @@ body {
     margin: 5px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-
 }
 
 .button-container button:hover {
